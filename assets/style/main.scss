@@ -3,8 +3,8 @@
     font-family: 'Balsamiq Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/balsamiq-sans-v10-latin-regular.woff2') format('woff2'), 
-         url('../fonts/balsamiq-sans-v10-latin-regular.woff') format('woff'); 
+    src: url('~/assets/fonts/balsamiq-sans-v10-latin-regular.woff2') format('woff2'), 
+         url('~/assets/fonts/balsamiq-sans-v10-latin-regular.woff') format('woff'); 
   }
  
   @font-face {
@@ -12,8 +12,8 @@
     font-family: 'Balsamiq Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/balsamiq-sans-v10-latin-700.woff2') format('woff2'), 
-         url('../fonts/balsamiq-sans-v10-latin-700.woff') format('woff'); 
+    src: url('~/assets/fonts/balsamiq-sans-v10-latin-700.woff2') format('woff2'), 
+         url('~/assets/fonts/balsamiq-sans-v10-latin-700.woff') format('woff'); 
   }
 body{
     font-family: 'Balsamiq Sans';
