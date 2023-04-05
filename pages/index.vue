@@ -1,46 +1,74 @@
-// <script setup>
-// const { data: posts } = await useFetch(
-//     "http://localhost/wp/wp-json/wp/v2/projects"
-// );
-const { data: posts } = await useWpApi().getPosts();
+<script setup>
+// const { data: posts } = await useWpApi().getPosts();
+const columnHover = () => {
+    const elem = document.querySelectorAll(".menu__item a");
+    elem.forEach((e) => {
+        e.classList.add("styled");
+    });
+};
+// const showBackground = (e) => {
+//     e.target.querySelector(".col-side-bg").style.display = "block";
+// };
+// const hideBackground = (e) => {
+//     console.log(e.target);
+
+//     e.target.querySelector(".col-side-bg").style.display = "none";
+// };
 </script>
 <template>
-    <main>
-        <PageHeader>
-            <div class="hero-wrapper">
-                <div class="img-wrapper">
+    <div class="hero">
+        <div class="hero__col hero__col-left">
+            <div class="bg-transparent"></div>
+            <div class="hero__col_wrapper">
+                <div>
                     <img
-                        class="main-img"
-                        src="~/assets/img/man.jpg"
-                        alt="main image"
+                        class="hero__logo"
+                        src="~/assets/img/brand.svg"
+                        alt=""
                     />
                 </div>
+                <h2 class="hero__title">Клуб настільних ігор</h2>
+                <p class="hero__text">
+                    Бронювання ігор, ігро-тіндер, знайти компанію для гри
+                </p>
+                <NuxtLink class="btn btn__primary" to="#"
+                    >Дізнатися більше</NuxtLink
+                >
+            </div>
+        </div>
+        <div class="hero__col hero__col-middle">
+            <div class="bg-transparent"></div>
+            <div class="hero__col_wrapper">
                 <div>
-                    <h3>Some title</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ratione, non!
-                    </p>
-                    <a href="#" class="btn btn-primary">join</a>
+                    <img
+                        class="hero__logo"
+                        src="~/assets/img/brand.svg"
+                        alt=""
+                    />
                 </div>
+                <h2 class="hero__title">Наш Магазин настільних ігор</h2>
+                <p class="hero__text">
+                    Широкий асортимент ігор, ми допоможемо підібрати ігру, що
+                    підійте саме тобі
+                </p>
+                <NuxtLink class="btn" to="#">прейти у магазин</NuxtLink>
             </div>
-        </PageHeader>
-        <section class="container cards-wrapper">
-            <div class="row">
-                <BlogCard
-                    v-for="post in posts"
-                    :key="post.id"
-                    :title="post.title.rendered"
-                    :content="post.content.rendered"
-                    :image="post.better_featured_image.source_url"
-                    :slug="post.slug"
-                />
+        </div>
+        <div class="hero__col hero__col-right">
+            <div class="bg-transparent"></div>
+            <div class="hero__col_wrapper">
+                <div>
+                    <img
+                        class="hero__logo"
+                        src="~/assets/img/brand.svg"
+                        alt=""
+                    />
+                </div>
+                <h2 class="hero__title">Організація заходів</h2>
+                <p class="hero__text">Вигідні пропозиції від наших партнерів</p>
+                <NuxtLink class="btn" to="#">Дізнатися більше</NuxtLink>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 </template>
-<style lang="scss">
-.cards-wrapper {
-    padding: 20px 0;
-}
-</style>
+

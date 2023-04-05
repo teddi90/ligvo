@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MenuTop />
+        <HeaderNav />
         <NuxtPage />
     </div>
 </template>
