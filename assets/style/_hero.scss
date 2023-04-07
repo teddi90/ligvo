@@ -1,0 +1,214 @@
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    @include media('md'){
+        flex-direction: column;
+    }
+    &__logo{
+        @include media('md'){
+            display: none;
+        }
+    }
+    &__col{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        @include media('md'){
+            height: 33.33vh;
+            align-items:center;
+        }
+        @include min-media('md'){
+            flex: 1;
+            height: 100vh;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .bg-transparent{
+            display: none;
+            @include min-media('md'){
+                display: block;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                z-index: 3;
+                left: 0;
+                top: 0;
+            }       
+        }
+        &:hover{
+            .btn{
+                background-color: $main-color;
+                border-color: $main-color;
+            }
+            .hero__col_wrapper{
+                z-index: 4;
+            }
+        }
+        &_wrapper{
+            position: relative;
+            @include media('md'){
+                text-align: center;
+            }
+            @include min-media('md'){
+                max-width: 310px;
+            }
+        }
+        &-left{
+            background-color: #1E2F5A;
+            @include min-media('md'){
+                justify-content: flex-end;
+                padding-right:32px;
+                text-align: right;
+            }
+            &:hover{
+                &::after{
+                    opacity: 1;
+                }
+            }
+            &::after{
+                content:'';
+                display: block;
+                background-color: #fff;
+                background-image: url('~/assets/img/table_games.png');
+                background-repeat: no-repeat;
+                background-position:  23px center;
+                width: 200%;
+                height: 100vh;
+                position: absolute;
+                right: -200%;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity .2s ease;
+                @include media('md'){
+                    display: none;
+                }
+            }
+            .hero__logo{
+                transform: rotate(90deg);
+                margin-right: -10px;
+            }
+
+        }
+        &-middle{
+            background-color: #355197;
+            text-align: center;
+            justify-content: center;
+            @include min-media('md'){
+                padding: 0 16px;
+
+            }
+            .hero__col_wrapper{
+                max-width: 355px;
+            }
+            &:hover{
+                &::after, &::before{
+                    opacity: 1;
+                }
+            }
+            &::after{
+                content: "";
+                display: block;
+                background-color: #fff;
+                background-image: url('~/assets/img/card_game2.png');
+                background-repeat: no-repeat;
+                background-position: calc(100% - 24px) center;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                right: -100%;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity .2s ease-in-out;
+                @include media('md'){
+                    display: none;
+                }
+            }
+            &::before{
+                content: "";
+                display: block;
+                background-color: #fff;
+                background-image: url('~/assets/img/card_game1.png');
+                background-repeat: no-repeat;
+                background-position: calc(100% + 225px) bottom;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                left:-100%;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity .2s ease-in-out;
+                @include media('md'){
+                    display: none;
+                }
+            }
+        }
+        &-right{
+            background-color: #496FD0;
+            box-sizing: border-box;
+            @include min-media('md'){
+                justify-content: flex-start;
+                padding-left: 32px;
+            }
+            
+            &:hover{
+                &::after{
+                    // display: block;
+                    opacity: 1;
+                }
+            }
+            &::after{
+                content: "";
+                display: block;
+                background-color: #fff;
+                background-image: url('~/assets/img/party.png');
+                background-repeat: no-repeat;
+                background-position: calc(100% - 24px) center;
+                width: 200%;
+                height: 100vh;
+                position: absolute;
+                left: -200%;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity .2s ease-in-out;
+                @include media('md'){
+                    display: none;
+                }
+            }
+            .hero__col_wrapper{
+                @include min-media('md'){
+                    max-width: 300px;
+                }
+            }
+            .hero__logo{
+                transform: scaleY(-1) rotate(-90deg);
+                margin-left: -10px;
+            }
+        }
+        .btn:hover{
+            background-color: #ff3737;
+            border-color: #ff3737;
+        }
+    }
+    &__logo{
+        margin-bottom: 20px;
+    }
+    &__title{
+        font-size: 32px;
+        text-transform: uppercase;
+        color:#fff;
+        font-weight: 700;
+        line-height: 39px;
+        margin-bottom: 16px;
+        @include media('md'){
+            margin-bottom: 24px;
+            padding: 0 20px;
+        }
+    }
+    &__text{
+        color:#fff;
+        margin-bottom: 36px;
+        @include media('md'){
+            display: none;
+        }
+    }
+}
