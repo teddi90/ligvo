@@ -9,7 +9,7 @@ export default () => {
 
     // Get All posts
     const getPosts = async (categories, page = 1, perPage = 9) => {
-        let query = `projects?_embed&per_page=${perPage}&page=${page}`;
+        let query = `posts?_embed&per_page=${perPage}&page=${page}`;
         if (categories) {
             query += `&categories=${categories}`;
         }
@@ -17,7 +17,7 @@ export default () => {
     }
 
     // Get a Single Post
-    const getPost = async (slug) => get(`projects?slug=${slug}&_embed`);
+    const getPost = async (slug) => get(`posts?slug=${slug}&_embed`);
 
     // Get All Categories
     const getCategories = async () => get("categories");

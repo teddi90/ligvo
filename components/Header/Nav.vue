@@ -47,10 +47,10 @@
                 </div>
                 <ul class="menu">
                     <li class="menu__item">
-                        <NuxtLink to="/">Партнерство</NuxtLink>
+                        <NuxtLink to="/partnership">Партнерство</NuxtLink>
                     </li>
                     <li class="menu__item">
-                        <NuxtLink to="/">Контакти</NuxtLink>
+                        <NuxtLink to="/contacts">Контакти</NuxtLink>
                     </li>
                 </ul>
             </nav>

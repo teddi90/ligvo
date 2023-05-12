@@ -1,0 +1,38 @@
+.partnership{
+    &__hero{
+        background-color: $primery-medium-color;
+        padding: 176px 0 142px;
+    }
+    &__title{
+        text-transform: uppercase;
+        color:#fff;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+    &__logo{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    &__text{
+        color:#fff;
+        max-width: 700px;
+        line-height: 1.5;
+    }
+}
+.partners{
+    padding: 78px 0 180px;
+    &__title{
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 82px;
+    }
+    &__item{
+        text-transform: uppercase;
+        color: rgba(73, 111, 208, 0.5);
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 47px;
+    }
+}
+
