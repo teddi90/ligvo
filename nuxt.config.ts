@@ -26,8 +26,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         public: {
-            wpUri: '',
-            googleMapsApiKey: '',
+            wpUri: process.env.WP_URI,
+            googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
         },
     },
 
