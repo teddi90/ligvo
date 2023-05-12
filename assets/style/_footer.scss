@@ -36,6 +36,10 @@
             a{
                 color:#fff;
                 text-decoration: none;
+                transition: color .2s ease-in-out;
+                &:hover{
+                    color:$main-color;
+                }
             }
         }
        
@@ -56,6 +60,10 @@
                 text-decoration: none;
                 color:#fff;
                 display: inline-block;
+                transition: color .2s ease-in-out;
+                &:hover{
+                    color:$main-color;
+                }
             }
         }
         &__text{
@@ -87,6 +95,13 @@
     }
     &__icon{
         display: inline-block;
+        svg{
+            color:#fff;
+            transition: color .3s ease-in-out;
+            &:hover{
+                color:$main-color;
+            }
+        }
     }
     &__icon:not(:last-child){
         margin-right: 20px;

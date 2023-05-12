@@ -182,7 +182,7 @@
         transform: scale(1.7) translateY(-50%);
         transition: all .5s linear;
             &.animation-background{
-            opacity: 1;
+                opacity: 1;
                 left: 24px;
                 transform: scale(1) translateY(-50%);
 
@@ -206,7 +206,7 @@
         }
         &__middle-2 {
             position: absolute;
-            height: 393px;
+            height: 521px;
             width: 517px;
             background-image: url("~/assets/img/card_game2.png");
             background-repeat: no-repeat;
@@ -216,14 +216,14 @@
             bottom: 10%;
             &.animation-background{
                     right: -35%;
-                    bottom: 0;
+                    bottom: -10%;
     
             }
         }
         &__middle-3 {
             position: absolute;
-            height: 717px;
-            width: 676px;
+            height: 756px;
+            width: 727px;
             background-image: url("~/assets/img/card_game3.png");
             background-repeat: no-repeat;
             transition: all .37s linear;
@@ -243,7 +243,7 @@
             background-image: url("~/assets/img/adult_events.png");
             background-repeat: no-repeat;
             visibility: hidden;
-            transition: transform .5s linear, right .5s linear, top .5s linear;
+            transition: transform .5s linear, right .5s linear, top .5s linear, opacity .5s linear ;
             top: 40%;
             right: -100px;
             opacity: 0;
@@ -263,7 +263,7 @@
             background-image: url("~/assets/img/children_events.png");
             background-repeat: no-repeat;
             visibility: hidden;
-            transition: transform .5s linear, right .5s linear, top .5s linear;
+            transition: transform .5s linear, right .5s linear, top .5s linear, opacity .5s linear;
             top: 60%;
             right: -100px;
             transform: scale(1.7) translateY(-50%);

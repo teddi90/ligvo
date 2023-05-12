@@ -2,7 +2,7 @@
     <div class="map">
         <GMapMap
             :center="center"
-            :zoom="15"
+            :zoom="16"
             :options="mapStyle"
             style="width: 100%; height: 485px; margin: auto"
         >
@@ -26,14 +26,14 @@
 <script setup>
 import { CustomMarker } from "vue3-google-map";
 const openedMarkerID = ref(null);
-const center = ref({ lat: 48.921948458561265, lng: 24.718 });
+const center = ref({ lat: 48.92246917952839, lng: 24.708524565007522 });
 const markers = ref([
     {
         description: "Belvederska 27a",
         id: "1",
         position: {
-            lat: 48.922948458561265,
-            lng: 24.703178445039878,
+            lat: 48.92290073850172,
+            lng: 24.70317670323559,
         },
     },
 ]);

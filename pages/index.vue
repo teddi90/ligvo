@@ -18,15 +18,6 @@ const menuElemsResetColor = () => {
     elems.forEach((e) => {
         e.classList.remove("styled");
     });
-
-    // @mouseover="logoSetColor(), menuElemsChangeColor()"
-    // @mouseleave="menuElemsResetColor"
-
-    //  @mouseover="logoChangeColor(), menuElemsChangeColor()"
-    //         @mouseleave="logoSetColor(), menuElemsResetColor()"
-
-    //  @mouseover="logoChangeColor(), menuElemsResetColor()"
-    //         @mouseleave="logoSetColor"
 };
 
 let sectionWith = null;
@@ -45,7 +36,6 @@ onMounted(() => {
 const currentSection = ref(0);
 const detectCursor = (e) => {
     currentSection.value = getCurrentSection(e.pageX, e.pageY);
-    console.log(currentSection.value);
 };
 const getCurrentSection = (cursorPositionX, cursorPositionY) => {
     if (cursorPositionX > 0 && cursorPositionX < sectionWith) {
@@ -80,7 +70,12 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
     >
         <div :class="{ active: currentSection === 1 }" class="hero-section">
             <div class="hero-section__row">
-                <div :class="{ active: currentSection === 0 }" class="col-1-3">
+                <div
+                    @mouseover="logoSetColor(), menuElemsChangeColor()"
+                    @mouseleave="menuElemsResetColor"
+                    :class="{ active: currentSection === 0 }"
+                    class="col-1-3"
+                >
                     <div class="hero-col hero-col__left">
                         <div class="hero-col__wrapper">
                             <div>
@@ -135,7 +130,12 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                         ></div>
                     </div>
                 </div>
-                <div :class="{ active: currentSection === 0 }" class="col-1-3">
+                <div
+                    @mouseover="logoChangeColor(), menuElemsChangeColor()"
+                    @mouseleave="logoSetColor(), menuElemsResetColor()"
+                    :class="{ active: currentSection === 0 }"
+                    class="col-1-3"
+                >
                     <div class="hero-col hero-col__middle">
                         <div class="hero-col__wrapper">
                             <div>
@@ -192,7 +192,12 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                         ></div>
                     </div>
                 </div>
-                <div :class="{ active: currentSection === 0 }" class="col-1-3">
+                <div
+                    @mouseover="logoChangeColor(), menuElemsResetColor()"
+                    @mouseleave="logoSetColor"
+                    :class="{ active: currentSection === 0 }"
+                    class="col-1-3"
+                >
                     <div class="hero-col hero-col__right">
                         <div class="hero-col__wrapper">
                             <div>
