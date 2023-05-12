@@ -108,7 +108,9 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 <div class="col-2-3">
                     <div class="hero-background__wrapper">
                         <div
-                            :class="{ animationBg: currentSection === 1 }"
+                            :class="{
+                                'animation-background': currentSection === 1,
+                            }"
                             class="hero-background__left"
                         ></div>
                     </div>
@@ -119,8 +121,18 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
             <div class="hero-section__row">
                 <div class="col-1-3">
                     <div class="hero-background__wrapper">
-                        <div class="hero-background__middle-1"></div>
-                        <div class="hero-background__middle-2"></div>
+                        <div
+                            :class="{
+                                'animation-background': currentSection === 2,
+                            }"
+                            class="hero-background__middle-1"
+                        ></div>
+                        <div
+                            :class="{
+                                'animation-background': currentSection === 2,
+                            }"
+                            class="hero-background__middle-2"
+                        ></div>
                     </div>
                 </div>
                 <div :class="{ active: currentSection === 0 }" class="col-1-3">
@@ -152,7 +164,12 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 </div>
                 <div class="col-1-3">
                     <div class="hero-background__wrapper">
-                        <div class="hero-background__middle-3"></div>
+                        <div
+                            :class="{
+                                'animation-background': currentSection === 2,
+                            }"
+                            class="hero-background__middle-3"
+                        ></div>
                     </div>
                 </div>
             </div>
@@ -162,11 +179,15 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 <div class="col-2-3">
                     <div class="hero-background__wrapper">
                         <div
-                            :class="{ active: currentSection === 3 }"
+                            :class="{
+                                'animation-background': currentSection === 3,
+                            }"
                             class="hero-background__right-1"
                         ></div>
                         <div
-                            :class="{ active: currentSection === 4 }"
+                            :class="{
+                                'animation-background': currentSection === 4,
+                            }"
                             class="hero-background__right-2"
                         ></div>
                     </div>

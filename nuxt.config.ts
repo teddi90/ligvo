@@ -21,12 +21,9 @@ export default defineNuxtConfig({
         '~/plugins/vueGoogleMaps.js',
         // '~/plugins/vee-validate.js',
     ],
-    build: {
-        transpile: ["@fawmi/vue-google-maps", "vee-validate", "vue3-google-map"],
-    },
-    alias: {
-        "@fawmi/vue-google-maps": require.resolve("@fawmi/vue-google-maps"),
-    },
+    // build: {
+    //     transpile: [],
+    // },
     runtimeConfig: {
         public: {
             wpUri: '',
