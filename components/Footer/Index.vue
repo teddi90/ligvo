@@ -1,6 +1,6 @@
 <template>
     <slot name="map"></slot>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container">
             <div class="footer__logo">
                 <NuxtLink to="/">
@@ -86,15 +86,11 @@
                     </div>
                     <div class="col-md-6">
                         <div class="footer-social">
-                            <div class="footer-social__banner">
-                                <h3>Зв’язатися з нами</h3>
-                                <p>
-                                    Буль ласка, звяжіться з нами якщо бажаєте
-                                    стати партнером або хочете дізнатись
-                                    будь-яку іншу інформацію.
-                                </p>
-                                <a class="btn" href="#">Telegram chat</a>
-                            </div>
+                            <Callback
+                                text="Будь ласка, звяжіться з нами якщо бажаєте стати партнером або хочете дізнатись будь-яку іншу інформацію."
+                            >
+                            </Callback>
+
                             <ul class="footer-social__list">
                                 <li>
                                     <a href="#">Чат спільноти Ligvo</a>

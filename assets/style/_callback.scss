@@ -1,0 +1,22 @@
+.callback{
+    background-color:$primery-light-color;
+    padding: 16px;
+    border-radius:calc($border-radius / 2);
+    &-title{
+        color:#fff;
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &-text{
+        color:#fff;
+    }
+    &-btn{
+        width: 100%;
+        padding: 16px 0;
+    }
+    &-btn:not(:last-child){
+        margin-bottom: 8px;
+    }
+}

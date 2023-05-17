@@ -1,9 +1,9 @@
 <template>
-    <header class="header">
+    <header :class="{ header_bg: scrollPosition > 50 }" class="header">
         <div class="container">
             <nav class="nav">
                 <div class="nav__wrapper">
-                    <div class="logo">
+                    <div class="nav__logo">
                         <NuxtLink to="/">
                             <svg
                                 width="133"
@@ -51,7 +51,7 @@
                             <NuxtLink to="/partnership">Партнерство</NuxtLink>
                         </li>
                         <li class="menu__item">
-                            <NuxtLink to="/contacts">Контакти</NuxtLink>
+                            <a href="#footer">Контакти</a>
                         </li>
                     </ul>
                     <div @click="toggleMenu" class="burger-container">
@@ -63,33 +63,55 @@
                     </div>
                 </div>
                 <div class="menu-mobile__wrapper">
-                    <ul class="menu-mobile">
-                        <li class="menu-mobile__item">
-                            <NuxtLink hto="#" class="menu-mobile__link"
-                                >Клуб настільних ігор</NuxtLink
+                    <div>
+                        <ul class="menu-mobile">
+                            <li class="menu-mobile__item">
+                                <NuxtLink
+                                    @click="toggleMenu"
+                                    to="#"
+                                    class="menu-mobile__link"
+                                    >Клуб настільних ігор</NuxtLink
+                                >
+                            </li>
+                            <li class="menu-mobile__item">
+                                <NuxtLink
+                                    @click="toggleMenu"
+                                    to="#"
+                                    class="menu-mobile__link"
+                                    >Магазин настільних ігор</NuxtLink
+                                >
+                            </li>
+                            <li class="menu-mobile__item">
+                                <NuxtLink
+                                    @click="toggleMenu"
+                                    to="#"
+                                    class="menu-mobile__link"
+                                    >Корпоративи</NuxtLink
+                                >
+                            </li>
+                            <li class="menu-mobile__item">
+                                <NuxtLink
+                                    @click="toggleMenu"
+                                    to="#"
+                                    class="menu-mobile__link"
+                                    >Дитячі заходи</NuxtLink
+                                >
+                            </li>
+                            <li class="menu-mobile__item">
+                                <NuxtLink
+                                    @click="toggleMenu"
+                                    to="contacts"
+                                    class="menu-mobile__link"
+                                    >Контакти</NuxtLink
+                                >
+                            </li>
+                        </ul>
+                        <Callback>
+                            <a href="#" class="btn callback-btn"
+                                >Зателефонувати</a
                             >
-                        </li>
-                        <li class="menu-mobile__item">
-                            <NuxtLink to="#" class="menu-mobile__link"
-                                >Магазин настільних ігор</NuxtLink
-                            >
-                        </li>
-                        <li class="menu-mobile__item">
-                            <NuxtLink to="#" class="menu-mobile__link"
-                                >Корпоративи</NuxtLink
-                            >
-                        </li>
-                        <li class="menu-mobile__item">
-                            <NuxtLink to="#" class="menu-mobile__link"
-                                >Дитячі заходи</NuxtLink
-                            >
-                        </li>
-                        <li class="menu-mobile__item">
-                            <NuxtLink to="#" class="menu-mobile__link"
-                                >Контакти</NuxtLink
-                            >
-                        </li>
-                    </ul>
+                        </Callback>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -97,8 +119,15 @@
 </template>
 
 <script setup>
+const scrollPosition = ref(null);
 const toggleMenu = () => {
     const header = document.querySelector(".header");
     header.classList.toggle("menu-mobile-opened");
 };
+const updateScroll = () => {
+    scrollPosition.value = window.scrollY;
+};
+onMounted(() => {
+    window.addEventListener("scroll", updateScroll);
+});
 </script>

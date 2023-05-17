@@ -1,11 +1,17 @@
 <script setup>
 const { data: posts } = await useWpApi().getPosts();
-console.log(posts.value);
+// console.log(posts.value);
+
+const isModalVisible = ref(false);
+
+const showModal = () => {
+    isModalVisible.value = true;
+};
 const logoSetColor = () => {
-    document.querySelector(".logo svg").classList.remove("styled");
+    document.querySelector(".nav__logo svg").classList.remove("styled");
 };
 const logoChangeColor = () => {
-    document.querySelector(".logo svg").classList.add("styled");
+    document.querySelector(".nav__logo svg").classList.add("styled");
 };
 const menuElemsChangeColor = () => {
     const elems = document.querySelectorAll(".menu__item a");
@@ -254,6 +260,42 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 </div>
             </div>
         </div>
+        <div class="hero-mobile hero-mobile__top">
+            <div class="hero-mobile__wrapper">
+                <h2 class="hero__title">Клуб настільних ігор</h2>
+                <NuxtLink class="btn btn__primary hero__btn" to="#"
+                    >Дізнатися більше</NuxtLink
+                >
+            </div>
+        </div>
+        <div class="hero-mobile hero-mobile__middle">
+            <div class="hero-mobile__wrapper">
+                <h2 class="hero__title">Наш Магазин настільних ігор</h2>
+                <NuxtLink class="btn hero__btn" to="#"
+                    >перейти у магазин</NuxtLink
+                >
+            </div>
+        </div>
+        <div class="hero-mobile hero-mobile__down">
+            <div class="hero-mobile__wrapper">
+                <h2 class="hero__title">Організація заходів</h2>
+                <a href="#" @click="showModal" class="btn hero__btn" to="#"
+                    >Дізнатися більше</a
+                >
+            </div>
+        </div>
+        <LigvoModal v-model:isModalVisible="isModalVisible">
+            <ul class="hero-modal__list">
+                <li class="hero-modal__item">
+                    <a class="hero-modal__link" href="#"
+                        >Корпоративи та групові заходи</a
+                    >
+                </li>
+                <li class="hero-modal__item">
+                    <a class="hero-modal__link" href="#">Дитячі заходи</a>
+                </li>
+            </ul>
+        </LigvoModal>
     </div>
 
     <Footer>

@@ -2,22 +2,38 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 5;
 
 .header{
-    padding-top: 32px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99999;
-
+    overflow: hidden;
+    transition: all .4s linear; 
+    @include min-media('md'){
+        padding: 32px 0;
+    }
     @include media('md'){
-        padding: 20px 0;
+        padding: 16px 0;
+        align-items:center;
         background-color: $primery-color;
-        height: 72px;
-        transition: all 0.5s ease-out, background 1s ease-out;
+        height: 64px;
+        transition: all 0.7s ease-out, background 1s ease-out;
         transition-delay: 0.2s;
+    }
+    &_bg{
+        @include min-media('md'){
+            background-color: rgba($color: $primery-color, $alpha: .9);
+            padding: 17px 0;
+            & .nav__logo svg.styled{
+                color:#FFF;
+            }
+            & .menu__item a.styled{
+                color:#FFF; 
+            }
+        }
     }
     &.menu-mobile-opened {
         height: 100%;
-        background-color:#0c1732;
+        // background-color:#142246;
         transition: all 0.3s ease-in, background 0.5s ease-in;
         transition-delay: 0.25s;
         .burger-container {
@@ -49,25 +65,28 @@ $menuItems: 5;
                 }
             }
         }
+        & .callback{
+            opacity: 1;
+        }
     }
 }
-.nav__wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-}
-.logo svg{
-    color:#fff;
-    transition: color .3s ease-in-out;
-    &.styled{
-        color:$main-color;
+.nav{
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
     }
-
-}
-.logo svg{
-    @include media('md'){
-        max-width: 97px;
+    &__logo svg{
+        color:#fff;
+        transition: color .3s ease-in-out;
+        @include media('md'){
+            max-width: 97px;
+        }
+        &.styled{
+            color:$main-color;
+        }
+    
     }
 }
 .menu{
@@ -152,11 +171,22 @@ $menuItems: 5;
     text-align: center;
     margin: 0;
     padding: 0;
+    padding: 0 20px 6% 20px;
     &__wrapper{
+        position: relative;
         display: flex;
         height: 100vh;
         width: 100%;
         align-items: center;
+        &>div{
+            width: 100%;
+        }
+        & .callback{
+            margin: 0 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
         @include min-media('md'){
             display: none;
         }
@@ -182,7 +212,6 @@ $menuItems: 5;
             color: #FFF;
             text-decoration: none;
             font-size: 18px;
-            line-height: 2.35;
             font-weight: 400;
             width: 100%;
         }

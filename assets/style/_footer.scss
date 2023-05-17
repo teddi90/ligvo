@@ -1,6 +1,9 @@
 .footer{
     padding: 65px 0 25px;
     background-color: $primery-color;
+    @include media('md'){
+        display: none;
+    }
     &__logo{
         svg{
             color:#fff;
@@ -46,6 +49,9 @@
     }
     &__info-services{
         margin-right: 86px;
+        @include media('lg'){
+            margin-right: 28px;
+        }
     }
     &-social{
         position: relative;
@@ -70,13 +76,11 @@
             color:#fff;
             margin-bottom: 20px;
         }
-        &__banner{
+        & .callback{
             position: absolute;
             left: 0;
             top: -415px;
             padding: 60px 80px;
-            background-color: $primery-light-color;
-            border-radius:calc($border-radius / 2);
             h3{
                 font-size: 32px;
                 font-weight: 600;
@@ -110,49 +114,49 @@
         margin-bottom: 24px;
         position: relative;
     }
-    &-form{
-        position: absolute;
-        width: 100%;
-        left: 0;                
-        bottom: 70px;
-        background-color: #fff;
-        padding: 60px 80px;
-        border-radius:calc($border-radius / 2);
-        h3{
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        p{
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
+    // &-form{
+    //     position: absolute;
+    //     width: 100%;
+    //     left: 0;                
+    //     bottom: 70px;
+    //     background-color: #fff;
+    //     padding: 60px 80px;
+    //     border-radius:calc($border-radius / 2);
+    //     h3{
+    //         font-size: 32px;
+    //         font-weight: 600;
+    //         margin-bottom: 24px;
+    //     }
+    //     p{
+    //         font-weight: 600;
+    //         margin-bottom: 24px;
+    //     }
        
-        &__input{
-            width: 100%;
-            height: 56px;
-            padding: 0 12px;
-            border:none;
-            border-bottom:1px solid rgba(0,0,0,.42);
-        }
-        &__textarea{
-            width: 100%;
-            padding: 18px 12px;
-            border:1px solid rgba(0,0,0,.42);
-            border-radius:calc($border-radius / 2);
-            margin-bottom: 48px;
-        }
-        &__error{
-            position: absolute;
-            bottom: -22px;
-            left: 0;
-            font-size: 14px;
-            color:red;
-        }
-        .btn__primary{
-            width: 100%;
-        }
-    }
+    //     &__input{
+    //         width: 100%;
+    //         height: 56px;
+    //         padding: 0 12px;
+    //         border:none;
+    //         border-bottom:1px solid rgba(0,0,0,.42);
+    //     }
+    //     &__textarea{
+    //         width: 100%;
+    //         padding: 18px 12px;
+    //         border:1px solid rgba(0,0,0,.42);
+    //         border-radius:calc($border-radius / 2);
+    //         margin-bottom: 48px;
+    //     }
+    //     &__error{
+    //         position: absolute;
+    //         bottom: -22px;
+    //         left: 0;
+    //         font-size: 14px;
+    //         color:red;
+    //     }
+    //     .btn__primary{
+    //         width: 100%;
+    //     }
+    // }
     &__rights{
         text-align: center;
         color:#fff;

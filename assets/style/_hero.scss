@@ -3,7 +3,9 @@
     height: 100vh;
     width: 100%;
     @include media('md'){
+        display: flex;
         flex-direction: column;
+        padding-top: 64px;
     }
     &__logo{
         margin-bottom: 20px;
@@ -31,10 +33,12 @@
         }
     }
     &__btn{
-        visibility: hidden;
-        height: 0;
-        font-size: 0;
-        transition: all .3s ease;
+        @include min-media('md'){
+            visibility: hidden;
+            height: 0;
+            transition: all .3s ease;
+            font-size: 0;
+        }
         &-wrapper{
             height: 52px;          
         }
@@ -46,6 +50,9 @@
         top: 0;
         height: 100%;
         width: 100%;
+        @include media('md'){
+            display: none;
+        }
         &.active{
             z-index: 1;
         }
@@ -82,10 +89,13 @@
     }
     &-col__left{
         background-color: $primery-color;
-        @include min-media('md'){
+        text-align: right;
+        align-items: flex-end;
+        @include min-media('lg'){
             padding-right:32px;
-            text-align: right;
-            align-items: flex-end;
+        }
+        @include media('lg'){
+            padding-right:20px;
         }
         .hero__logo{
             transform: rotate(90deg);
@@ -97,19 +107,18 @@
         text-align: center;
         justify-content: center;
         align-items: center;
+        @include min-media('md'){
+            padding: 0 16px;
+        }
         .hero-col__wrapper{
             max-width: 355px;
         }
-        @include min-media('md'){
-            padding: 0 16px;
-            }
+       
     }
     &-col__right{
         background-color: $primery-light-color;
         box-sizing: border-box;
-        @include min-media('md'){
-            align-items: flex-start;
-        }
+        align-items: flex-start;
         &:hover{
             .hero-col__wrapper{
                 display: none;
@@ -122,9 +131,12 @@
             padding-bottom: 49px;
         }
         .hero-col__wrapper{
-            padding-left: 32px;
-            @include min-media('md'){
+            @include min-media('lg'){
                 max-width: 300px;
+                padding-left: 32px;
+            }
+            @include media('lg'){
+                padding-left: 20px;
             }
         }
         .hero__logo{
@@ -143,7 +155,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 32px;
+        @include min-media('lg'){
+            padding-left: 32px;
+        }
+        @include media('lg'){
+            padding-left: 20px;
+        }
         &:nth-child(1){
             background-color:  $primery-light-color;                
         }
@@ -161,6 +178,45 @@
             .hero__logo, .hero__content_btn{
                 visibility: visible;
             }
+        }
+    }
+    &-mobile{
+        height: 33.33vh;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        &__wrapper{
+            text-align: center;
+            max-width: 350px;
+        }
+        &__top{
+            background-color: $primery-color;
+        }
+        &__middle{
+            background-color: $primery-medium-color;
+        }
+        &__down{
+            background-color: $primery-light-color;
+        }
+    }
+    &-modal{
+        &__list{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        &__item:not(:last-child){
+            padding-bottom: 16px;
+            border-bottom: 1px solid $primery-color;
+            margin-bottom: 16px;
+        }
+        &__link{
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            color:$primery-color;
+            display: block;
         }
     }
     &-background{
@@ -183,10 +239,19 @@
         transition: all .5s linear;
             &.animation-background{
                 opacity: 1;
-                left: 24px;
-                transform: scale(1) translateY(-50%);
+                left: -70px;
+                transform: scale(.75) translateY(-65%);
+                @include min-media('lg'){
+                    left: -10px;
+                    transform: scale(.9) translateY(-55%);
+                }
+                @include min-media('xl'){
+                    left: 24px;
+                    transform: scale(1) translateY(-50%);
+                }
 
             }
+           
         }
         &__middle-1 {
             position: absolute;
@@ -199,8 +264,17 @@
             right: -100%;
             transform: translateY(-50%);
             &.animation-background{
+                right: -55%;
+                top: 50%;
+                transform: scale(.7) translateY(-75%);
+                @include min-media('lg'){
+                    transform: scale(.9) translateY(-55%);
+                    right: -45%;
+                }
+                @include min-media('xl'){
+                    transform: scale(1) translateY(-50%);
                     right: -20%;
-                    top: 50%;
+                }
     
             }
         }
@@ -211,12 +285,22 @@
             background-image: url("~/assets/img/card_game2.png");
             background-repeat: no-repeat;
             transition: all .37s linear;
-            // transition-delay: 1s;
             right: -100%;
             bottom: 10%;
             &.animation-background{
-                    right: -35%;
-                    bottom: -10%;
+                right: -70%;
+                bottom: -10%;
+                transform: scale(.7) translateY(-32%);
+                @include min-media('lg'){
+                    right: -60%;
+                    bottom: -40%;
+                    transform: scale(.9) translateY(-60%);
+                }
+                @include min-media('xl'){
+                    right: -37%;
+                    bottom: -40%;
+                    transform: scale(1) translateY(-50%);
+                }
     
             }
         }
@@ -231,8 +315,19 @@
             top: 70%;
             left: -100%;
             &.animation-background{
-                left: -30%;
+                left: -73%;
                 top: 50%;
+                transform: scale(.7) translateY(-65%);
+                @include min-media('lg'){
+                    transform: scale(.9) translateY(-40%);
+                    left: -55%;
+                    top: 50%;
+                }
+                @include min-media('xl'){
+                    transform: scale(1) translateY(-35%);
+                    left: -30%;
+                    top: 50%;
+                }   
 
         }
         }
@@ -242,6 +337,7 @@
             width: 910px;
             background-image: url("~/assets/img/adult_events.png");
             background-repeat: no-repeat;
+            background-size: cover;
             visibility: hidden;
             transition: transform .5s linear, right .5s linear, top .5s linear, opacity .5s linear ;
             top: 40%;
@@ -249,11 +345,19 @@
             opacity: 0;
             transform: scale(1.7) translateY(-50%);
             &.animation-background{
-                right: 24px;
                 opacity: 1;
                 top: 50%;
                 visibility: visible;
-                transform: scale(1) translateY(-50%);
+                right:-130px;
+                transform: scale(.68) translateY(-75%);
+                @include min-media('lg'){
+                    right: -50px;
+                    transform: scale(.83) translateY(-63%);
+                }
+                @include min-media('xl'){
+                    right: 24px;
+                    transform: scale(1) translateY(-50%);
+                }
             }
         }
         &__right-2{
@@ -269,11 +373,19 @@
             transform: scale(1.7) translateY(-50%);
             opacity: 0;
             &.animation-background{
-                right: 24px;
+                right: -130px;
                 opacity: 1;
                 top: 50%;
                 visibility: visible;
-                transform: scale(1) translateY(-50%);
+                transform: scale(.68) translateY(-75%);
+                @include min-media('lg'){
+                    right: -20px;
+                    transform: scale(.9) translateY(-60%);
+                }
+                @include min-media('xl'){
+                    right: 24px;
+                    transform: scale(1) translateY(-50%);
+                }
             }
         }
     

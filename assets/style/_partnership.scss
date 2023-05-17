@@ -2,6 +2,10 @@
     &__hero{
         background-color: $primery-medium-color;
         padding: 176px 0 142px;
+        @include media('sm'){
+            background-color: $primery-color;
+            padding:100px 0 23px;
+        }
     }
     &__title{
         text-transform: uppercase;
@@ -9,23 +13,50 @@
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 35px;
+        @include media('sm'){
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: none;
+        }
     }
     &__logo{
         display: inline-block;
         transform: rotate(90deg);
+        @include media('sm'){
+        display: none;
+        }
     }
     &__text{
-        color:#fff;
+        color:#fff;           
         max-width: 700px;
         line-height: 1.5;
+        @include media('sm'){
+            max-width: 100%;
+        }
     }
 }
 .partners{
     padding: 78px 0 180px;
+    @include media('sm'){
+        padding: 40px 0 197px;
+    }
+    &__wrapper{
+        @include media('sm'){
+            margin-bottom: 8px;
+            color:#222;
+        }
+    }
     &__title{
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 82px;
+        @include media('sm'){
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
     }
     &__item{
         text-transform: uppercase;
@@ -33,6 +64,49 @@
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 47px;
+        @include media('sm'){
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+    &__text{
+        @include min-media('sm'){
+            display: none;
+        }
+    }
+    &__footer{
+        
+        &-mobile{
+            background-color:$primery-color;
+            padding: 38px 0 20px;
+            @include min-media('md'){
+                display: none;
+            }
+        }
+        &-callback{
+            position: relative;
+            margin-bottom: 45px;
+            & .callback{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: -243px;
+            }
+        }
+        &-right{
+            color:#fff;
+            text-align: center;
+            margin-bottom: 0;
+            border-top: 1px solid rgba(255,255,255,.4);
+            padding-top: 16px;
+        }
+    }
+}
+.partnership, .partners, .partners__footer-mobile{
+    & .container{
+        @include media('sm'){
+            padding: 0 25px;
+        }
     }
 }
 

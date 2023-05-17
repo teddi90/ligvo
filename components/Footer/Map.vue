@@ -53,7 +53,7 @@ const mapStyle = ref({
             elementType: "geometry",
             stylers: [
                 {
-                    color: "#1C2546", // set the color of all building elements
+                    color: "#000000 ", // set the color of all building elements
                 },
             ],
         },
@@ -107,10 +107,10 @@ const mapStyle = ref({
         },
         {
             featureType: "landscape.man_made",
-            elementType: "geometry",
+            elementType: "geometry.fill",
             stylers: [
                 {
-                    // color: "#181F39",
+                    color: "#1C2546",
                 },
             ],
         },
