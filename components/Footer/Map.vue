@@ -10,8 +10,8 @@
                 :key="index"
                 v-for="(marker, index) in markers"
                 :position="marker.position"
-                :clickable="true"
-                :draggable="true"
+                :clickable="false"
+                :draggable="false"
                 :icon="{
                     url: '/marker.png',
                     size: { width: 60, height: 90, f: 'px', b: 'px' },
