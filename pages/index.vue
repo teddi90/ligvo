@@ -1,9 +1,11 @@
 <script setup>
-const { data: posts } = await useWpApi().getPosts();
+// const { data: posts } = await useWpApi().getPosts();
 // console.log(posts.value);
 
 const isModalVisible = ref(false);
-
+const hideModal = () => {
+    isModalVisible.value = false;
+};
 const showModal = () => {
     isModalVisible.value = true;
 };
@@ -284,7 +286,7 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 >
             </div>
         </div>
-        <LigvoModal v-model:isModalVisible="isModalVisible">
+        <LigvoModal :isModalVisible="isModalVisible" @hideModal="hideModal">
             <ul class="hero-modal__list">
                 <li class="hero-modal__item">
                     <a class="hero-modal__link" href="#"
