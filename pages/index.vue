@@ -99,10 +99,10 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                                 для гри
                             </p>
                             <div class="hero__btn-wrapper">
-                                <NuxtLink
+                                <a
                                     class="btn btn__primary hero__btn"
-                                    to="#"
-                                    >Дізнатися більше</NuxtLink
+                                    href="https://ligvo-club.grt-team.com/"
+                                    >Дізнатися більше</a
                                 >
                             </div>
                         </div>
@@ -265,8 +265,10 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
         <div class="hero-mobile hero-mobile__top">
             <div class="hero-mobile__wrapper">
                 <h2 class="hero__title">Клуб настільних ігор</h2>
-                <NuxtLink class="btn btn__primary hero__btn" to="#"
-                    >Дізнатися більше</NuxtLink
+                <a
+                    class="btn btn__primary hero__btn"
+                    href="https://ligvo-club.grt-team.com/"
+                    >Дізнатися більше</a
                 >
             </div>
         </div>
