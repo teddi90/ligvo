@@ -1,10 +1,14 @@
 <template>
-    <header :class="{ header_bg: scrollPosition > 50 }" class="header">
+    <header
+        :class="{ header_bg: scrollPosition > 50 }"
+        class="header"
+        ref="header"
+    >
         <div class="container">
             <nav class="nav">
                 <div class="nav__wrapper">
                     <div class="nav__logo">
-                        <NuxtLink to="/">
+                        <NuxtLink to="/" @click="closeMenu">
                             <svg
                                 width="133"
                                 height="32"
@@ -66,16 +70,16 @@
                     <div>
                         <ul class="menu-mobile">
                             <li class="menu-mobile__item">
-                                <NuxtLink
-                                    @click="toggleMenu"
-                                    to="#"
+                                <a
+                                    @click="closeMenu"
+                                    href="https://ligvo-club.grt-team.com/"
                                     class="menu-mobile__link"
-                                    >Клуб настільних ігор</NuxtLink
+                                    >Клуб настільних ігор</a
                                 >
                             </li>
                             <li class="menu-mobile__item">
                                 <NuxtLink
-                                    @click="toggleMenu"
+                                    @click="closeMenu"
                                     to="#"
                                     class="menu-mobile__link"
                                     >Магазин настільних ігор</NuxtLink
@@ -83,7 +87,7 @@
                             </li>
                             <li class="menu-mobile__item">
                                 <NuxtLink
-                                    @click="toggleMenu"
+                                    @click="closeMenu"
                                     to="#"
                                     class="menu-mobile__link"
                                     >Корпоративи</NuxtLink
@@ -91,7 +95,7 @@
                             </li>
                             <li class="menu-mobile__item">
                                 <NuxtLink
-                                    @click="toggleMenu"
+                                    @click="closeMenu"
                                     to="#"
                                     class="menu-mobile__link"
                                     >Дитячі заходи</NuxtLink
@@ -99,7 +103,7 @@
                             </li>
                             <li class="menu-mobile__item">
                                 <NuxtLink
-                                    @click="toggleMenu"
+                                    @click="closeMenu"
                                     to="contacts"
                                     class="menu-mobile__link"
                                     >Контакти</NuxtLink
@@ -120,9 +124,13 @@
 
 <script setup>
 const scrollPosition = ref(null);
+const header = ref(null);
+
 const toggleMenu = () => {
-    const header = document.querySelector(".header");
-    header.classList.toggle("menu-mobile-opened");
+    header.value.classList.toggle("menu-mobile-opened");
+};
+const closeMenu = () => {
+    header.value.classList.remove("menu-mobile-opened");
 };
 const updateScroll = () => {
     scrollPosition.value = window.scrollY;

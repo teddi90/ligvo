@@ -300,6 +300,26 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
                 </li>
             </ul>
         </LigvoModal>
+        <div
+            class="hero__indicators"
+            :class="{
+                hero__indicators_white:
+                    currentSection == 2 || currentSection == 0,
+            }"
+        >
+            <div
+                class="hero__indicators-item"
+                :class="{ active: currentSection == 1 }"
+            ></div>
+            <div
+                class="hero__indicators-item"
+                :class="{ active: currentSection == 0 || currentSection == 2 }"
+            ></div>
+            <div
+                class="hero__indicators-item"
+                :class="{ active: currentSection > 2 }"
+            ></div>
+        </div>
     </div>
 
     <Footer>
