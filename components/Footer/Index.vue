@@ -50,7 +50,9 @@
                     <div class="col-md-6">
                         <ul class="footer__info-services">
                             <li>
-                                <NuxtLink to="#">Клуб настільних ігор</NuxtLink>
+                                <a href="https://ligvo-club.grt-team.com/"
+                                    >Клуб настільних ігор</a
+                                >
                             </li>
                             <li>
                                 <NuxtLink to="#"
@@ -63,22 +65,20 @@
                                 >
                             </li>
                             <li>
-                                <NuxtLink to="/partnership"
-                                    >Дитячі заходи</NuxtLink
-                                >
+                                <NuxtLink to="#">Дитячі заходи</NuxtLink>
                             </li>
                         </ul>
                         <ul class="footer__info-contact">
                             <li>
                                 <a
-                                    href="mailto:ligvoclub@emai.com"
+                                    href="mailto:ligvoclub@email.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >ligvoclub@emai.com</a
+                                    >ligvoclub@email.com</a
                                 >
                             </li>
                             <li>
-                                <a href="tel:+0954314083">095 431 4083</a>
+                                <a href="tel:+380954314083">095 431 4083</a>
                             </li>
                             <li>76000 Івано-Франківськ</li>
                             <li>Бельведерська, 27а</li>
@@ -93,10 +93,18 @@
 
                             <ul class="footer-social__list">
                                 <li>
-                                    <a href="#">Чат спільноти Ligvo</a>
+                                    <a
+                                        href="https://t.me/ligvo_if"
+                                        target="_blank"
+                                        >Чат спільноти Ligvo</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#">Приватний чат Telegram</a>
+                                    <a
+                                        href="https://t.me/+380954314083"
+                                        target="_blank"
+                                        >Приватний чат Telegram</a
+                                    >
                                 </li>
                             </ul>
                             <p class="footer-social__text">
@@ -105,7 +113,7 @@
 
                             <div class="footer__icons-wrapper">
                                 <a
-                                    href="#"
+                                    href="https://www.instagram.com/ligvo_if/"
                                     target="_blank"
                                     class="footer__icon"
                                 >
@@ -191,7 +199,10 @@
                                         />
                                     </svg>
                                 </a>
-                                <a href="#" target="_blank" class="footer__icon"
+                                <a
+                                    href="https://www.facebook.com/ligvo.if/"
+                                    target="_blank"
+                                    class="footer__icon"
                                     ><svg
                                         width="40"
                                         height="40"

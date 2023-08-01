@@ -4,7 +4,12 @@
         <p v-if="props.text" class="callback-text">{{ props.text }}</p>
         <div class="callback-btns">
             <slot></slot>
-            <a href="#" class="btn callback-btn">Telegram chat</a>
+            <a
+                href="https://t.me/+380954314083"
+                target="_blank"
+                class="btn callback-btn"
+                >Telegram chat</a
+            >
         </div>
     </div>
 </template>

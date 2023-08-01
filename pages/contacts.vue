@@ -19,10 +19,18 @@
                 <li class="contacts-list__item">Бельведерська, 27а</li>
             </ul>
             <div class="contacts-socil">
-                <a href="#" class="contacts-socil__link">
+                <a
+                    href="https://www.facebook.com/ligvo.if/"
+                    target="_blank"
+                    class="contacts-socil__link"
+                >
                     <img src="~/assets/img/facebook.svg" alt="Ligvo facebook" />
                 </a>
-                <a href="#" class="contacts-socil__link">
+                <a
+                    href="https://www.instagram.com/ligvo_if/"
+                    target="_blank"
+                    class="contacts-socil__link"
+                >
                     <img
                         src="~/assets/img/instagram.svg"
                         alt="Ligvo instagram"
