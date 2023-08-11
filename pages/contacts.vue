@@ -18,25 +18,25 @@
                 <li class="contacts-list__item">76000 Івано-Франківськ</li>
                 <li class="contacts-list__item">Бельведерська, 27а</li>
             </ul>
-            <div class="contacts-socil">
+            <div class="contacts-social">
                 <a
                     href="https://www.facebook.com/ligvo.if/"
                     target="_blank"
-                    class="contacts-socil__link"
+                    class="contacts-social__link"
                 >
                     <img src="~/assets/img/facebook.svg" alt="Ligvo facebook" />
                 </a>
                 <a
                     href="https://www.instagram.com/ligvo_if/"
                     target="_blank"
-                    class="contacts-socil__link"
+                    class="contacts-social__link"
                 >
                     <img
                         src="~/assets/img/instagram.svg"
                         alt="Ligvo instagram"
                     />
                 </a>
-                <a href="#" class="contacts-socil__link">
+                <a href="#" class="contacts-social__link">
                     <img src="~/assets/img/youtube.svg" alt="Ligvo youtube" />
                 </a>
             </div>

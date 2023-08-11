@@ -99,6 +99,9 @@
             margin-bottom: 0;
             border-top: 1px solid rgba(255,255,255,.4);
             padding-top: 16px;
+            @include media('xs'){
+                font-size: 14px;
+            }
         }
     }
 }
