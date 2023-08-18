@@ -36,12 +36,14 @@ body{
 } 
 .map{
     height: 485px;
+    overflow: hidden;
     @include media('md'){
         display: none;
     }
 }
-.vue-map-container{
-    height: 100%;
+#map-box{
+    height: 106%;
+    position: relative;
 }
 
 // Modal window

@@ -18,16 +18,20 @@ export default defineNuxtConfig({
         }
     ],
     plugins: [
-        '~/plugins/vueGoogleMaps.js',
         // '~/plugins/vee-validate.js',
     ],
+    modules: [
+        'nuxt-mapbox'
+    ],
+    mapbox: {
+        accessToken: 'pk.eyJ1IjoidGVkZGk5MCIsImEiOiJjbGxna2pyZGsxNXNsM2ZtZ2g5ZHlidWoxIn0.DKa2sXY_Qofpm1pAmlQktg'
+    },
     build: {
-        transpile: ["@fawmi/vue-google-maps", "vee-validate"],
+        transpile: ["vee-validate"],
     },
     runtimeConfig: {
         public: {
             wpUri: process.env.WP_URI,
-            googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
         },
     },
 })
