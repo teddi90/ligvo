@@ -36,7 +36,11 @@
                         alt="Ligvo instagram"
                     />
                 </a>
-                <a href="#" class="contacts-social__link">
+                <a
+                    href="https://www.youtube.com/@ligvo_if"
+                    target="_blank"
+                    class="contacts-social__link"
+                >
                     <img src="~/assets/img/youtube.svg" alt="Ligvo youtube" />
                 </a>
             </div>

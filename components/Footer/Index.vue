@@ -159,7 +159,7 @@
                                     </svg>
                                 </a>
                                 <a
-                                    href="#"
+                                    href="https://www.youtube.com/@ligvo_if"
                                     target="_blank"
                                     class="footer__icon"
                                 >
