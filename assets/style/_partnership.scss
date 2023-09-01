@@ -70,7 +70,7 @@
         }
     }
     &__text{
-        @include min-media('sm'){
+        @include min-media('md'){
             display: none;
         }
     }

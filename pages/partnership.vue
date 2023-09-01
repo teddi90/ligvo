@@ -51,11 +51,7 @@
             </p>
         </div>
     </footer>
-    <Footer>
-        <template v-slot:map>
-            <FooterMap />
-        </template>
-    </Footer>
+    
 </template>
 
 <script setup>

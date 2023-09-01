@@ -325,10 +325,4 @@ const getCurrentSection = (cursorPositionX, cursorPositionY) => {
             </ul>
         </LigvoModal>
     </div>
-
-    <Footer>
-        <template v-slot:map>
-            <FooterMap />
-        </template>
-    </Footer>
 </template>
