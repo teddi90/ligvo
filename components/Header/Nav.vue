@@ -111,7 +111,7 @@
                             </li>
                         </ul>
                         <Callback>
-                            <a href="#" class="btn callback-btn"
+                            <a href="tel:+380954314083" class="btn callback-btn"
                                 >Зателефонувати</a
                             >
                         </Callback>
